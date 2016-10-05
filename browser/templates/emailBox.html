@@ -1,0 +1,12 @@
+<div class="email-box">
+	<div class="email-instance" ng-class="{'unreadMessage': !email.isRead}" ng-repeat="email in emails" ng-click="markRead(email)" ui-sref="singleEmail({id:email.id})">
+		<span class="star glyphicon glyphicon-star-empty" ng-hide="email.starThis" ng-click="toggleStar(email, $event)"></span>
+		<span class="star glyphicon glyphicon-star" ng-show="email.starThis" ng-click="toggleStar(email, $event)"></span>
+		<div class="email-sender-preview">{{email.Sender.name}}</div>
+		<div class="email-subject-body-preview">
+			<span class="email-subject-preview">{{email.subject}}</span>
+			<span class="email-body-preview">- {{email.body}}</span>	
+		</div>
+		<div class="email-date-preview">{{email.createdAt | date}}</div>
+	</div>
+</div>

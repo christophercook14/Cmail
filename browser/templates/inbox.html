@@ -1,0 +1,23 @@
+<div>
+	<div class="inbox-unread">
+		<span class="inbox-identifier">Unread</span>
+		<div class="no-unread" ng-show="!unread.length">
+			<span class="unread-message">Woohoo! You've read all the important messages in your inbox.</span> 
+		</div>
+		<email-box emails="unread"></email-box>
+	</div>  
+	<div class="inbox-starred">
+		<span class="inbox-identifier">Starred</span>
+		<div class="no-starred" ng-show="!starred.length">
+			<span class="starred-message">You have no starred messages.</span> 
+		</div>
+		<email-box emails="starred"></email-box>
+	</div> 
+	<div class="inbox-main">
+		<span class="inbox-identifier">Everything else</span>
+		<div class="no-other" ng-show="!other.length">
+			<span class="other-message">You have no other messages.</span> 
+		</div>
+		<email-box emails="other"></email-box>
+	</div>
+</div>

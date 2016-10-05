@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="Cmail">
+	<head>
+		<base href="/">
+		<link href='/bootstrap/dist/css/bootstrap.css' rel='stylesheet'/>
+		<link href='/stylesheets/style.css' rel='stylesheet'/>
+
+
+	</head>
+	<body ng-controller="MainCtrl">
+
+		<div class="row header">
+			<div class="col-md-12">
+				<span class="logo">Cmail</span>
+				<form name="selectUserForm" class="select-user">
+					<span class="hello">Hello {{currentUser.name.split(" ")[0]}}!</span>
+					<select ng-model="selectedUser" ng-options="user.name for user in users"></select>
+					<button ng-click="changeUser()">Change User</button>
+				</form>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-2 sidebar">
+				<div class="sidebar-menu">
+					<ul>
+						<li><button class="compose-button" ng-click="composeShow = true">COMPOSE</button></li>
+						<li ui-sref-active="inbox" ng-class="{active: $state.current.name === 'inbox'}"><a ui-sref="staging">Inbox</a></li>
+						<li>Starred</li>
+						<li>Chats</li>
+						<li ui-sref-active="active"><a ui-sref="sent">Sent Mail</a></li>
+						<li>Drafts</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-10 container-fluid main">
+				<ui-view></ui-view>	
+			</div>
+		</div>
+		
+		 
+		<div ng-show="composeShow">
+			<compose-box show="composeShow" content="composeContent" contacts="users"></compose-box>
+		</div>
+		
+
+
+
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="/bootstrap/dist/js/bootstrap.js"></script>
+		<script type="text/javascript" src="/angular/angular.js"></script>
+		<script type="text/javascript" src="/angular-ui-router/release/angular-ui-router.js"></script>
+		<script type="text/javascript" src="/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+		<script type="text/javascript" src="/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+		<!-- <script type="text/javascript" src="/angular-ui-bootstrap/dist/ui-bootstrap-csp.js"></script> -->
+		<script type="text/javascript" src="/app.js"></script>
+		<script type="text/javascript" src="/states/states.js"></script>
+		<script type="text/javascript" src="/controllers/inbox.controller.js"></script>
+		<script type="text/javascript" src="/controllers/sent.controller.js"></script>
+		<script type="text/javascript" src="/controllers/compose.controller.js"></script>
+		<script type="text/javascript" src="/controllers/singleEmail.controller.js"></script>
+		<script type="text/javascript" src="/controllers/emailBox.controller.js"></script>
+		<script type="text/javascript" src="/factories/user.factory.js"></script>
+		<script type="text/javascript" src="/factories/email.factory.js"></script>
+		<script type="text/javascript" src="/directives/emailBox.directive.js"></script>
+		<script type="text/javascript" src="/directives/compose.directive.js"></script>
+		<script type="text/javascript" src="/directives/autocompleteRecipient.directive.js"></script>
+		<script type="text/javascript" src="/directives/autocompleteCopied.directive.js"></script>
+	</body>
+</html>

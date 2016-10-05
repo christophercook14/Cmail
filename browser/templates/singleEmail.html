@@ -1,0 +1,27 @@
+<div class="single-email">
+	<div class="subject-line">
+		<p class="subject">{{email.subject}}</p>
+		<div class="email-buttons">
+			<div class="star-button">
+				<span class="glyphicon glyphicon-star-empty" ng-hide="email.starThis" ng-click="toggleStar(email, $event)"></span>
+				<span class="glyphicon glyphicon-star" ng-show="email.starThis" ng-click="toggleStar(email, $event)"></span>
+			</div>
+			<div class="btn-group drop">
+			   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-triangle-bottom"></span></button>
+			   <ul class="dropdown-menu dropdown-menu-right" role="menu">
+			      <li><a ng-click="newEmail('reply')" href="#">Reply</a></li>
+			      <li><a ng-click="newEmail('reply all')" href="#">Reply all</a></li>
+			      <li><a ng-click="newEmail('forward')" href="#">Forward</a></li>
+			      <li class="divider"></li>
+			      <li><a ng-click="markUnread(email)" href="#">Mark as unread</a></li>
+			      <li class="divider"></li>
+			      <li><a ng-click="delete(email)" href = "#">Delete</a></li>
+			   </ul>
+			</div>
+		</div>
+	</div>
+	<p class="from">{{email.Sender.name}}</p>
+	<p class="to">to: {{email.recipientUsers.join(', ')}}</p>
+	<p class="cc" ng-show="email.copiedUsers.length">cc: {{email.copiedUsers.join(', ')}}</p>
+	<p class="body">{{email.body}}</p>
+</div> 

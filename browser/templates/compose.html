@@ -1,0 +1,35 @@
+<form name="composeForm" class="compose-window" novalidate>
+	<div class='header' ng-show="!subject.length">New Message</div>
+  	<div class='header' ng-show="subject.length">{{subject}}</div> 
+  	<div class='inner'>
+    	<div class="compose-field short">
+    		<div class="complete-div">
+    			<span class="completed-recipient" ng-repeat="recipient in completedRecipients">{{recipient}}</span>
+    		</div>
+    		<div class="recipient-input">
+    			<input autocomplete-recipient type="text" ng-model="content.recipient" uib-typeahead="contact.address as contact.name for contact in contacts | filter:$viewValue | limitTo:8" placeholder="Recipients" required>
+    		</div>
+    	</div>
+    	<div class="compose-field short">
+    		<div class="complete-div">
+    			<span class="completed-recipient" ng-repeat="copied in completedCopied">{{copied}}</span>
+    		</div>
+    		<div class="recipient-input">
+    			<input autocomplete-copied type="text" ng-model="content.copied" uib-typeahead="contact.address as contact.name for contact in contacts | filter:$viewValue | limitTo:8" placeholder="CC" required>
+    		</div>
+    	</div>
+    	<div class="compose-field short">
+ 	    	<input type="text" ng-model="content.email.subject" placeholder="Subject" required>
+ 	    </div>
+    	<div class="compose-field tall">
+      		<textarea ng-model="content.email.body"></textarea>
+    	</div>
+    	<div class='button-bar'>
+      		<button class="send" ng-disabled="!completedRecipients.length" ng-click="sendEmail()">Send</button>
+      		<div class="right-button-grp">
+          		<button class="save" data-toggle="tooltip" title="Save draft"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+          		<button class="trash" data-toggle="tooltip" title="Discard" ng-click="discard()"><span class="glyphicon glyphicon-trash"></span></button>
+      		</div>
+    	</div>
+  	</div>
+</form>

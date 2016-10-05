@@ -1,0 +1,324 @@
+h1 {
+	color: red;
+}
+
+body {
+	background-color: #55688A;
+}
+
+.email-instance {
+	background-color: #DBDDE2;
+	padding: 3px 20px 3px 10px;
+	border: 0.5px solid grey;
+	height: 34px;
+}
+
+.unreadMessage.email-instance {
+	background-color: white;
+}
+
+.unreadMessage .email-sender-preview, .unreadMessage .email-date-preview, .unreadMessage .email-subject-preview {
+	font-weight: bold;
+}
+
+.email-subject-body-preview, .email-sender-preview, .email-date-preview {
+	display: inline-block;
+	margin-top: 3px;
+}
+
+.email-body-preview {
+	color: #77777A;
+}
+
+.email-sender-preview {
+	width: 15%;
+	text-overflow: clip;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.email-subject-body-preview {
+	width: 70%;
+	text-overflow: clip;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.email-date-preview {
+	float: right;
+	width: 10%;
+	text-align: right;
+}
+
+.sidebar-menu ul {
+	color: #FFFFFF;
+	list-style-type: none;
+}
+
+.sidebar-menu li.active {
+	font-weight: bold;
+}
+
+.single-email {
+	background-color: #DBDDE2;
+	padding: 10px 20px 20px 20px;
+}
+
+.single-email .subject-line {
+	border-bottom: 1px solid black;
+	margin-bottom: 5px;
+}
+
+.single-email .email-buttons {
+	float: right;
+}
+
+.single-email .email-buttons .star-button {
+	font-size: 22px;
+	margin-top: 8px;
+}
+
+.single-email .subject {
+	font-size: 24px;
+	font-weight: bold;
+	display: inline-block;
+
+}
+
+.single-email .from {
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.single-email .to, .single-email .cc {
+	color: #77777A;
+	margin-bottom: 0;
+}
+
+.single-email .body {
+	margin-top: 15px;
+}
+
+.email-buttons .star-button, .email-buttons .drop {
+	display: inline-block;
+}
+
+.email-buttons .drop .btn {
+	background-color: #DBDDE2;
+	border: none;
+	color: black;
+	font-size: 20px;
+	margin-bottom: 10px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.compose-box {
+	background-color: #DBDDE2;
+	padding: 20px;
+}
+
+.compose-box input {
+	width:100%;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+.send-button {
+	float:right;
+	margin: 10px 20px 0 0;
+	width: 100px;
+	height: 40px;
+	background-color: #4589F7;
+	color: white;
+}
+
+.logo {
+	font-size: 30px;
+	color: #FFFFFF;
+	margin: 15px 0 0 38px;
+}
+
+.header {
+	border-bottom: 1px solid #9bb7e8;
+	margin-bottom: 20px;
+}
+
+.main {
+	overflow: scroll;
+	height: 650px;
+}
+
+.sidebar {
+	padding-right: 0;
+	width: 200px;
+}
+
+.compose-button {
+	color: black;
+	margin-bottom: 5px;
+	padding: 4px;
+	width: 80%;
+	font-size: 12px;
+}
+
+.select-user {
+	float: right;
+	margin: 10px 10px 0 0;
+}
+
+.hello {
+	color: white;
+	margin-right: 20px;
+}
+
+.inbox-identifier {
+	color: white;
+}
+
+.email-box, .no-unread, .no-starred, .no-other {
+	margin: 10px 0 20px 0;
+}
+
+.star {
+	padding-right: 10px;
+	top: -3px;
+}
+
+.glyphicon-star {
+	color: #f7cd59;
+}
+
+.no-unread, .no-starred, .no-other {
+	background-color: #DBDDE2;
+	padding: 15px 20px 15px 10px;
+	border: 0.5px solid grey;
+	height: 50px;
+	text-align: center;
+}
+
+a, a:hover, a:visited { color: inherit; } 
+
+a:focus {
+	text-decoration: none;
+}
+
+.compose-window {
+  min-width: 600px;
+  min-height: 400px;
+  position: fixed;
+  bottom: 0px;
+  right: 10px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.compose-window .header {
+  background-color: #404040;
+  color: white;
+  margin-bottom: 0;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+}
+
+.compose-window .inner {
+  padding: 0;
+}
+
+.compose-window .compose-field {
+  padding: 0;
+}
+
+.compose-field.short {
+	border-bottom: 1px solid #c2c4c6;
+	height: 40px;
+}
+
+.compose-field.tall {
+	border-bottom: 1px solid #c2c4c6;
+	height: 300px;
+}
+
+.compose-window input, .compose-window textarea {
+	width: 100%;
+	height: 100%;
+	border: none;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.compose-window textarea {
+  	height: 100%;
+  	padding-top: 10px;
+  	padding-bottom: 10px;
+}
+
+.button-bar {
+	height: 50px;
+}
+
+.button-bar button {
+	height: 30px;
+	margin: 10px 0;
+}
+
+.button-bar .send {
+	background-color: #3E83F1;
+	color: white;
+	width: 80px;
+	font-size: 11px;
+	font-weight: bold;
+	border-radius: 2px;
+	margin-left: 10px;
+	border: 0;
+}
+
+.button-bar .trash, .button-bar .save {
+	background-color: white;
+	color: #5f6163;
+	font-size: 16px;
+	border: 0;
+}
+
+.button-bar .right-button-grp {
+	float: right;
+	margin-right: 10px;
+	margin-left: 15px;
+}
+
+.completed-recipient {
+	height: 26px;
+	line-height: 26px;
+	margin: 7px 0 7px 10px;
+	padding-right: 5px;
+	padding-left: 5px;
+	display: inline-block;
+	float: left;
+	border: 1px solid #c2c4c6;
+	border-radius: 5px;
+}
+
+div.complete-div span:last-of-type {
+	margin-right: 7px;
+}
+
+.compose-window .recipient-input {
+	overflow: hidden;
+	height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

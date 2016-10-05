@@ -1,0 +1,8 @@
+<div class="email-instance" ng-repeat="email in emails" ui-sref="singleEmail({id:email.id})">
+	<div class="email-sender-preview">{{email.Recipient[0].name}}</div>
+	<div class="email-subject-body-preview">
+		<span class="email-subject-preview">{{email.subject}}</span>
+		<span class="email-body-preview">- {{email.body}}</span>	
+	</div>
+	<div class="email-date-preview">{{email.createdAt | date}}</div>
+</div>
